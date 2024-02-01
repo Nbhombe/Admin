@@ -9,6 +9,7 @@ import Product_1 from "../../assets/images/product_1.png";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBinLine } from "react-icons/ri";
+import Skeleton from "react-loading-skeleton";
 
 const optionsData = [
   { value: "chocolate", label: "Chocolate" },
@@ -139,7 +140,7 @@ const RecentOrdersData = [
   },
 ];
 
-const Products = () => {
+const Products = ({loading}) => {
   return (
     <ProductsStyled>
       <Header />
@@ -182,6 +183,7 @@ const Products = () => {
             </thead>
             <tbody>
               {RecentOrdersData.map((data, index) => (
+                loading ? <Skeleton /> : <>
                 <tr>
                   <td>
                     <div className="product-detail">
@@ -235,6 +237,7 @@ const Products = () => {
                     </div>
                   </td>
                 </tr>
+                </>
               ))}
             </tbody>
           </Table>

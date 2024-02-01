@@ -1,3 +1,4 @@
+import Skeleton from "react-loading-skeleton";
 import { NotificationListStyled } from "./style";
 
 const NotificationListData = [
@@ -67,34 +68,49 @@ const NotificationListData = [
   },
 ];
 
-const NotificationList = ({ unread, notifyDropdown, notifyListClass }) => {
+const NotificationList = ({
+  unread,
+  notifyDropdown,
+  notifyListClass,
+  loading,
+}) => {
   return (
-    <NotificationListStyled unread={unread} notifyDropdown={notifyDropdown} className={notifyListClass}>
+    <NotificationListStyled
+      unread={unread}
+      notifyDropdown={notifyDropdown}
+      className={notifyListClass}
+    >
       <ul>
         {NotificationListData.map((data, index) => (
           <li key={index} className={data.unread ? "unread" : ""}>
-            <div className="notification-content">
-              <div className="notification-content-image">
-                {data.unread && <div className="notification-dot"></div>}
-                {data.image ? (
-                  <img src={data.image} alt="profile-image" />
-                ) : (
-                  <p>{data.profileText}</p>
-                )}
-              </div>
-              <div className="notification-content-inner">
-                <h6>{data.notificationHead}</h6>
-                <p>{data.notificationDesc}</p>
-                {notifyDropdown && (
-                  <div className="notification-date-inner">
-                    <p>{data.notificationDate}</p>
+            {loading ? (
+              <Skeleton />
+            ) : (
+              <>
+                <div className="notification-content">
+                  <div className="notification-content-image">
+                    {data.unread && <div className="notification-dot"></div>}
+                    {data.image ? (
+                      <img src={data.image} alt="profile-image" />
+                    ) : (
+                      <p>{data.profileText}</p>
+                    )}
                   </div>
-                )}
-              </div>
-            </div>
-            <div className="notification-date">
-              <p>{data.notificationDate}</p>
-            </div>
+                  <div className="notification-content-inner">
+                    <h6>{data.notificationHead}</h6>
+                    <p>{data.notificationDesc}</p>
+                    {notifyDropdown && (
+                      <div className="notification-date-inner">
+                        <p>{data.notificationDate}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="notification-date">
+                  <p>{data.notificationDate}</p>
+                </div>
+              </>
+            )}
           </li>
         ))}
       </ul>
