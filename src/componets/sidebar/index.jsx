@@ -1,6 +1,6 @@
 import { useTheme } from "styled-components";
 import { SidebarStyled } from "./style";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -8,11 +8,19 @@ const Sidebar = () => {
   const theme = useTheme();
   const [isOpen, setIsopen] = useState(false);
 
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setIsopen(true);
+    }
+  }, []);
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
   };
   return (
-    <SidebarStyled className={`sidebar ${isOpen == true ? "active" : ""}`}>
+    <SidebarStyled
+      className={`sidebar ${isOpen === true ? "sidebarOpen" : ""}`}
+    >
+      {console.log(window.innerWidth)}
       <div className="logo">
         <div className="mainlogo">{theme.logoWhite}</div>{" "}
         <div className="minilogo">{theme.miniLogo}</div>{" "}

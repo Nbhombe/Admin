@@ -4,7 +4,7 @@ export const AdminLayoutStyled = styled.section`
   position: relative;
   height: 100vh;
   display: flex;
-  .active:has(~ .adminLayout-right){
+  .sidebarOpen:has(~ .adminLayout-right){
     .navigation {
         ul {
             li {
