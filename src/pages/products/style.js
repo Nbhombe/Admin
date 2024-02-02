@@ -121,7 +121,7 @@ export const ProductsStyled = styled.div`
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-                    width: 200px;
+                    max-width: 200px;
                   }
                   p {
                     color: ${(props) => props.theme.darkColor.dark3};
@@ -130,12 +130,29 @@ export const ProductsStyled = styled.div`
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-                    width: 187px;
+                    max-width: 187px;
                   }
                 }
               }
             }
           }
+        }
+      }
+    }
+    @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+      .search-product {
+        flex-direction: column;
+        gap: 20px;
+        .search-button, .search-input {
+          width: 100%;
+        }
+      }
+      .filter-wrap {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        .filter-select {
+          width: 100%;
         }
       }
     }

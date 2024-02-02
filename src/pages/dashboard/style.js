@@ -80,6 +80,7 @@ export const DashboardStyled = styled.div`
         margin-bottom: 25px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         .bar-graph-stats-inner {
           flex: 1;
           text-align: center;
@@ -117,6 +118,31 @@ export const DashboardStyled = styled.div`
     .recent-order-sec-inner,
     .top-customer-sec-inner {
       height: 100%;
+    }
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+    .middle-part {
+      .col-lg-8,
+      col-lg-4 {
+        display: block !important;
+      }
+      .pie-chart {
+        margin-top: 20px;
+      }
+      .bar-graph {
+        .bar-graph-head {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .bar-graph-stats {
+          flex-direction: column;
+        }
+      }
+    }
+    .bottom-part {
+      .recent-order-sec-inner {
+        margin-top: 20px;
+      }
     }
   }
 `;

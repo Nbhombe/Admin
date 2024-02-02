@@ -12,7 +12,8 @@ export const NotificationListStyled = styled.div`
       list-style: none;
       display: flex;
       align-items: center;
-      padding: ${({ notifyDropdown }) => (notifyDropdown ? "15px" : "15px 25px")};
+      padding: ${({ notifyDropdown }) =>
+        notifyDropdown ? "15px" : "15px 25px"};
       border-bottom: 1px solid ${(props) => props.theme.darkColor.dark4};
       &:nth-child(even) {
         .notification-content {
@@ -82,7 +83,7 @@ export const NotificationListStyled = styled.div`
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            width: 190px;
+            max-width: 190px;
           }
           p {
             font-size: ${(props) => props.theme.fontSize.semiSmall};
@@ -90,7 +91,7 @@ export const NotificationListStyled = styled.div`
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            width: 190px;
+            max-width: 190px;
           }
           .notification-date-inner {
             flex: 1 1 0;
@@ -111,6 +112,25 @@ export const NotificationListStyled = styled.div`
       }
       &:last-child {
         border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+    ul {
+      li {
+        flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+        .notification-content {
+          flex-wrap: wrap;
+          gap: 10px;
+          .notification-content-inner {
+            h6,
+            p {
+              max-width: 100px;
+            }
+          }
+        }
       }
     }
   }

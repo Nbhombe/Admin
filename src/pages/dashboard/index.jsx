@@ -142,12 +142,12 @@ const Dashboard = ({ loading }) => {
       </div>
       <div className="bottom-part">
         <Row>
-          <Col lg={4} className="d-flex">
+          <Col lg={4} >
             <div className="top-customer-sec flex-fill">
               <Customer customerWrapper="top-customer-sec-inner" />
             </div>
           </Col>
-          <Col lg={8} className="d-flex">
+          <Col lg={8} >
             <div className="recent-order-sec flex-fill">
               <RecentOrders ordersWrapper="recent-order-sec-inner" />
             </div>

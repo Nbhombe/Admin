@@ -7,11 +7,11 @@ const PieChart = () => {
           chart: {
             type: 'pie'
           },
-          title: {
-            verticalAlign: 'middle',
-            floating: true,
-            text: '<p>Total</p><br><p>4145</p>'
-          },
+          // title: {
+          //   verticalAlign: 'middle',
+          //   floating: true,
+          //   text: '<p>Total</p><br><p>4145</p>'
+          // },
           yAxis: {
             title: {
               text: ''

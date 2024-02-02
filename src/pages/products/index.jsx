@@ -147,8 +147,8 @@ const Products = ({loading}) => {
       <PageHead head="Product List" />
       <div className="product-wrapper">
         <div className="search-product">
-          <FormInput placeholder="Search Product" type="search" />
-          <Button btnText="Add Products" />
+          <FormInput placeholder="Search Product" type="search" formInputClass="search-input"/>
+          <Button btnText="Add Products" buttonClass="search-button"/>
         </div>
         <div className="filter-wrap">
           <h5>Filter</h5>
