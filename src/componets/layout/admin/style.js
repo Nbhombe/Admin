@@ -4,24 +4,24 @@ export const AdminLayoutStyled = styled.section`
   position: relative;
   height: 100vh;
   display: flex;
-  .sidebarOpen:has(~ .adminLayout-right){
+  .sidebarOpen:has(~ .adminLayout-right) {
     .navigation {
-        ul {
-            li {
-                a {
-                    display: block;
-                    text-align: center;
-                    transition: 0.5s all;
-                    p {
-                        display: none;
-                        transition: 0.5s all;
-                    }
-                }
+      ul {
+        li {
+          a {
+            display: block;
+            text-align: center;
+            transition: 0.5s all;
+            p {
+              display: none;
+              transition: 0.5s all;
             }
+          }
         }
+      }
     }
     ~ .adminLayout-right {
-        width: 100%;
+      width: 100%;
     }
   }
   .adminLayout-right {
@@ -29,5 +29,12 @@ export const AdminLayoutStyled = styled.section`
     height: 100%;
     padding: 20px 30px;
     overflow: auto;
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+    .sidebar:not(.sidebarOpen) {
+      ~ .adminLayout-right {
+        display: none;
+      }
+    }
   }
 `;

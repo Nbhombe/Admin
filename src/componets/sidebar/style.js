@@ -82,5 +82,12 @@ export const SidebarStyled = styled.div`
   }
   @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
     width: 100%;
+    &:not(.sidebarOpen) {
+      .logo {
+        .toggle-button {
+          right: 0;
+        }
+      }
+    }
   }
 `;
