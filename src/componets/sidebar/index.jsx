@@ -2,8 +2,11 @@ import { useTheme } from "styled-components";
 import { SidebarStyled } from "./style";
 import {useState} from "react";
 import { IoIosArrowBack } from "react-icons/io";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constants/routes";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const theme = useTheme();
   const [isOpen, setIsopen] = useState(false);
 
@@ -16,10 +19,10 @@ const Sidebar = () => {
       <div className="navigation">
         <ul>
           <li>
-            <a href="admin">{theme.dashboard} <p>Dashboard</p></a>
+            <Link to={ROUTES.dashboard}>{theme.dashboard} <p>Dashboard</p></Link>
           </li>
           <li>
-            <a href="/product">{theme.product} <p>Product</p></a>
+            <Link to={ROUTES.products}>{theme.product} <p>Product</p></Link>
           </li>
           <li>
             <a href="/insight">{theme.insight} <p>Insight</p></a>

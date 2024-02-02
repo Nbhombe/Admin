@@ -32,7 +32,7 @@ const AppRoutes = () => {
         <Route exact path="/*">
           {WebRoutes?.map(renderWebRoutes)}
         </Route>
-        <Route exact path="/admin*">
+        <Route exact path="/admin/*">
           {AdminRoutes?.map(renderAdmiRoutes)}
         </Route>        
       </Routes>
