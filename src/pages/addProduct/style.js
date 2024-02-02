@@ -34,9 +34,17 @@ export const AddProductStyled = styled.div`
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    flex-wrap: wrap;
     button {
       &:first-child {
         padding: 14px 27px;
+      }
+    }
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+    .add-product {
+      button {
+        width: 100%;
       }
     }
   }

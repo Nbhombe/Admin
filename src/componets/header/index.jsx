@@ -40,7 +40,7 @@ const Header = () => {
                   notifyListClass="notification-list"
                 />
                 <div className="notification-section-bottom">
-                  <a href="#">View All Notification</a>
+                  <a href={'/admin/notification'}>View All Notification</a>
                 </div>
               </Dropdown.Menu>
             </Dropdown>

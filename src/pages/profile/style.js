@@ -9,6 +9,7 @@ export const ProfileStyled = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    flex-wrap: wrap;
     padding: 50px 20px 34px;
     gap: 30px;
     position: relative;
@@ -52,6 +53,7 @@ export const ProfileStyled = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 15px;
         gap: 50px;
         li {
@@ -104,6 +106,7 @@ export const ProfileStyled = styled.div`
           font-size: ${(props) => props.theme.fontSize.small};
           font-weight: 500;
           color: ${(props) => props.theme.customColor.secondary};
+          word-break: break-all;
         }
       }
     }
@@ -184,7 +187,7 @@ export const ProfileStyled = styled.div`
                   border-radius: 50%;
                   object-fit: cover;
                 }
-              } 
+              }
               .client-name {
                 h4 {
                   font-size: ${(props) => props.theme.fontSize.semiSmall};
@@ -202,6 +205,23 @@ export const ProfileStyled = styled.div`
           }
         }
       }
+    }
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+    .personal-info {
+      ul {
+        li {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .timeline-main {
+      margin-top: 20px;
     }
   }
 `;

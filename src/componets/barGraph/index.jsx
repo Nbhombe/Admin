@@ -2,7 +2,7 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 import { BarGraphStyled } from "./style";
-const BarGraph = ({loading}) => {
+const BarGraph = () => {
   const options = {
     chart: {
       type: "column",

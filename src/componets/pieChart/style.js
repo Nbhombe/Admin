@@ -8,7 +8,10 @@ export const PieChartStyled = styled.div`
   }
   .highcharts-container {
     height: 100%;
+    width: 100% !important;
     svg {
+      width: 100% !important;
+      display: flex;
       .highcharts-legend {
         .highcharts-legend-item {
           text {
@@ -22,5 +25,8 @@ export const PieChartStyled = styled.div`
     .highcharts-credits {
       display: none;
     }
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+    height: 400px;
   }
 `;
