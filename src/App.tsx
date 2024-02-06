@@ -1,10 +1,11 @@
 import { ThemeProvider } from "styled-components";
-import "./App.css";
+// import "./App.css";
 import GlobalStyle from "./assets/style/globalStyle";
 import { useState } from "react";
 import { darkTheme, lightTheme } from "./assets/style/theme";
 import AppRoutes from "./routes";
 import ToggleComponent from "./componets/toggleComponent";
+import "./index.css";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -18,7 +19,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <div className="theme">
-          <ToggleComponent id="abc" onClick={toggleMode}/>
+          <ToggleComponent id="abc" onClick={toggleMode} />
         </div>
         <AppRoutes />
       </ThemeProvider>

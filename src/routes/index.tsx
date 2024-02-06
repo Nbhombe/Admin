@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebRoutes from "./web";
 import AdminRoutes from "./admin";
-import AdminLayout from "../componets/layout/admin";
+import AdminLayout from "../componets/layout/admin/";
+import React from "react";
 
 const AppRoutes = () => {
   const renderWebRoutes = (route, index) => {
@@ -14,7 +15,6 @@ const AppRoutes = () => {
     );
   };
 
-
   const renderAdmiRoutes = (route, index) => {
     return (
       <Route
@@ -25,7 +25,6 @@ const AppRoutes = () => {
     );
   };
 
-
   return (
     <BrowserRouter>
       <Routes>
@@ -34,7 +33,7 @@ const AppRoutes = () => {
         </Route>
         <Route exact path="/admin*">
           {AdminRoutes?.map(renderAdmiRoutes)}
-        </Route>        
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -34,15 +34,18 @@ const BarGraph = () => {
       title: {
         text: "",
       },
-      tickInterval: 100000
+      tickInterval: 100000,
     },
     tooltip: {
-        valueSuffix: ' '
+      valueSuffix: " ",
     },
     series: [
       {
-        name: 'Revenue',
-        data: [300000, 400000, 270000, 300000, 400000, 270000, 300000, 400000, 270000, 300000, 400000],
+        name: "Revenue",
+        data: [
+          300000, 400000, 270000, 300000, 400000, 270000, 300000, 400000,
+          270000, 300000, 400000,
+        ],
       },
     ],
   };

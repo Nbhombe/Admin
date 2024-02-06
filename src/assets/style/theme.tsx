@@ -1,3 +1,4 @@
+import React from "react";
 import {
   DarKLogoBlack,
   DarkCheck,
@@ -25,7 +26,7 @@ import {
   LightSearch,
   LightTeam,
   LightToggle,
-} from "../icons";
+} from "../icons/index";
 
 export const lightTheme = {
   brandColor: {
@@ -70,15 +71,15 @@ export const lightTheme = {
   },
   transparency: {
     brandColor: {
-      subtle: "227, 225, 252"
+      subtle: "227, 225, 252",
     },
     darkColor: {
       dark3: "167, 167, 167",
       dark4: "211, 211, 211",
     },
     customColor: {
-      sidebarToggleBg: "92,82,192"
-    }
+      sidebarToggleBg: "92,82,192",
+    },
   },
   fontSize: {
     semiSmall: "12px",
@@ -107,8 +108,7 @@ export const lightTheme = {
   search: <LightSearch />,
   bell: <LightBell />,
   info: <LightInfo />,
-  info: <LightInfo />,
-  miniLogo: <LightMiniLogo />
+  miniLogo: <LightMiniLogo />,
 };
 
 export const darkTheme = {
@@ -154,14 +154,14 @@ export const darkTheme = {
   },
   transparency: {
     brandColor: {
-      subtle: "227, 225, 252"
+      subtle: "227, 225, 252",
     },
     darkColor: {
       dark3: "#A7A7A7",
     },
     customColor: {
-      sidebarToggleBg: "92,82,192"
-    }
+      sidebarToggleBg: "92,82,192",
+    },
   },
   fontSize: {
     semiSmall: "12px",
@@ -190,5 +190,5 @@ export const darkTheme = {
   search: <LightSearch />,
   bell: <LightBell />,
   info: <LightInfo />,
-  miniLogo: <DarkMiniLogo />
+  miniLogo: <DarkMiniLogo />,
 };
