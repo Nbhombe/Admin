@@ -1,9 +1,9 @@
-import Container from "react-bootstrap/Container";
-import { SignInStyled } from "./style";
-import FormComponent from "../../componets/FormComponent";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import SignInForm from "../../componets/FormComponent/HOC/signInForm";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import FormComponent from '../../componets/FormComponent';
+import SignInForm from '../../componets/FormComponent/HOC/signInForm';
+import { SignInStyled } from './style';
 
 const SignIn = () => {
   return (
@@ -13,7 +13,7 @@ const SignIn = () => {
           <Col lg={5} md={12}>
             <FormComponent
               formComponentClass="form-wrap"
-              formHead="Sign In"
+              formHead="Login"
               formPara="Enter the below information to sign up"
             >
               <SignInForm />

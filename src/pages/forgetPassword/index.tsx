@@ -1,12 +1,12 @@
-import Container from "react-bootstrap/Container";
-import { ForgetPasswordStyled } from "./style";
-import FormComponent from "../../componets/FormComponent";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import ForgetPasswordForm from "../../componets/FormComponent/HOC/forgetPasswordForm";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import FormComponent from '../../componets/FormComponent';
+import ForgetPasswordForm from '../../componets/FormComponent/HOC/forgetPasswordForm';
+import { SignInStyled } from '../signIn/style';
 const ForgetPassword = () => {
   return (
-    <ForgetPasswordStyled>
+    <SignInStyled>
       <Container>
         <Row>
           <Col lg={5} md={12}>
@@ -21,7 +21,7 @@ const ForgetPassword = () => {
           </Col>
         </Row>
       </Container>
-    </ForgetPasswordStyled>
+    </SignInStyled>
   );
 };
 
