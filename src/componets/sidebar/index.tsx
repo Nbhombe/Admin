@@ -11,7 +11,7 @@ const Sidebar = () => {
     setIsOpen(prevOpen => !prevOpen);
   };
   return (
-    <SidebarStyled className={`sidebar ${isOpen == true ? 'active' : ''}`}>
+    <SidebarStyled className={`sidebar ${isOpen ? 'active' : ''}`}>
       <div className="logo">
         <div className="mainlogo">{theme.logoWhite}</div>{' '}
         <div className="minilogo">{theme.miniLogo}</div>{' '}
