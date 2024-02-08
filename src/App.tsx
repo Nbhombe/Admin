@@ -6,13 +6,14 @@ import { darkTheme, lightTheme } from './assets/style/theme';
 import AppRoutes from './routes';
 import ToggleComponent from './componets/toggleComponent';
 import './index.css';
+import { THEMES } from './utils/constants';
 
 function App() {
-  const [mode, setMode] = useState('light');
-  const theme = mode === 'light' ? lightTheme : darkTheme;
+  const [mode, setMode] = useState(THEMES.LIGHT);
+  const theme = mode === THEMES.LIGHT ? lightTheme : darkTheme;
 
   const toggleMode = () => {
-    setMode(m => (m === 'light' ? 'dark' : 'light'));
+    setMode(m => (m === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT));
   };
   return (
     <>
