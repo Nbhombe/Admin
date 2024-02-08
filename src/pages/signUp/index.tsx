@@ -1,8 +1,7 @@
-import Container from 'react-bootstrap/Container';
-import { SignUpStyled } from './style';
-import FormComponent from '../../componets/FormComponent';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import FormComponent from '../../componets/FormComponent';
 import SignUpForm from '../../componets/FormComponent/HOC/SignUpForm';
 import { SignInStyled } from '../signIn/style';
 
