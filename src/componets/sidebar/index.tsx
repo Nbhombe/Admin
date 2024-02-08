@@ -3,6 +3,14 @@ import { SidebarStyled } from './style';
 import { useState } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 
+const links = [
+  { themeLabel: 'dashboard', href: 'admin', text: 'Dashboard' },
+  { themeLabel: 'product', href: '/product', text: 'Product' },
+  { themeLabel: 'insight', href: '/insight', text: 'Insight' },
+  { themeLabel: 'team', href: '/people', text: 'People & Teams' },
+  { themeLabel: 'inbox', href: '', text: 'Inbox' },
+];
+
 const Sidebar = () => {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
@@ -21,31 +29,13 @@ const Sidebar = () => {
       </div>
       <div className="navigation">
         <ul>
-          <li>
-            <a href="admin">
-              {theme.dashboard} <p>Dashboard</p>
-            </a>
-          </li>
-          <li>
-            <a href="/product">
-              {theme.product} <p>Product</p>
-            </a>
-          </li>
-          <li>
-            <a href="/insight">
-              {theme.insight} <p>Insight</p>
-            </a>
-          </li>
-          <li>
-            <a href="/people">
-              {theme.team} <p>People & Teams</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              {theme.inbox} <p>Inbox</p>
-            </a>
-          </li>
+          {links.map((item, index) => (
+            <li key={index}>
+              <a href={item.href}>
+                {theme[item.themeLabel]} <p>{item.text}</p>
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </SidebarStyled>
