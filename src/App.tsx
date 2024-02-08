@@ -1,18 +1,18 @@
-import { ThemeProvider } from "styled-components";
-// import "./App.css";
-import GlobalStyle from "./assets/style/globalStyle";
-import { useState } from "react";
-import { darkTheme, lightTheme } from "./assets/style/theme";
-import AppRoutes from "./routes";
-import ToggleComponent from "./componets/toggleComponent";
-import "./index.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './assets/style/globalStyle';
+import { useState } from 'react';
+import { darkTheme, lightTheme } from './assets/style/theme';
+import AppRoutes from './routes';
+import ToggleComponent from './componets/toggleComponent';
+import './index.css';
 
 function App() {
-  const [mode, setMode] = useState("light");
-  const theme = mode === "light" ? lightTheme : darkTheme;
+  const [mode, setMode] = useState('light');
+  const theme = mode === 'light' ? lightTheme : darkTheme;
 
   const toggleMode = () => {
-    setMode((m) => (m === "light" ? "dark" : "light"));
+    setMode(m => (m === 'light' ? 'dark' : 'light'));
   };
   return (
     <>
