@@ -8,7 +8,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const ToggleSidebar = () => {
-    isOpen === true ? setIsOpen(false) : setIsOpen(true);
+    setIsOpen(prevOpen => !prevOpen);
   };
   return (
     <SidebarStyled className={`sidebar ${isOpen == true ? 'active' : ''}`}>
