@@ -1,5 +1,6 @@
 import LightToggle from "./toggle.svg?react";
 import LightLogo from "./logo.svg?react";
+import AdminLogo from './admin-logo.svg?react';
 import LightCheck from "./lightCheck.svg?react";
 import LightGoogle from "./google.svg?react";
 import LightFacebook from "./facebook.svg?react";
@@ -55,4 +56,5 @@ export {
   DarkBell,
   DarkCheck,
   DarkMiniLogo,
+  AdminLogo
 };

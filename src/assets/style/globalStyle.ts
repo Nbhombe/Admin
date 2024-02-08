@@ -1,6 +1,5 @@
 // globalStyles.js
 import { createGlobalStyle } from "styled-components";
-import Toggle from "../icons/toggle.svg";
 const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;

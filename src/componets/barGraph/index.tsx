@@ -1,47 +1,47 @@
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
-import { BarGraphStyled } from "./style";
+import { BarGraphStyled } from './style';
 const BarGraph = () => {
   const options = {
     chart: {
-      type: "column",
+      type: 'column',
     },
     title: {
-      text: "",
+      text: '',
     },
     xAxis: {
       categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sept",
-        "Nov",
-        "Dec",
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sept',
+        'Nov',
+        'Dec',
       ],
       crosshair: false,
       accessibility: {
-        description: "Months",
+        description: 'Months',
       },
     },
     yAxis: {
       min: 100000,
       title: {
-        text: "",
+        text: '',
       },
       tickInterval: 100000,
     },
     tooltip: {
-      valueSuffix: " ",
+      valueSuffix: ' ',
     },
     series: [
       {
-        name: "Revenue",
+        name: 'Revenue',
         data: [
           300000, 400000, 270000, 300000, 400000, 270000, 300000, 400000,
           270000, 300000, 400000,

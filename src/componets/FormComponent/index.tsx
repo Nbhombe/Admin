@@ -1,5 +1,5 @@
-import { FormComponentStyled } from "./style";
-import { useTheme } from "styled-components";
+import { FormComponentStyled } from './style';
+import { useTheme } from 'styled-components';
 
 const FormComponent = ({
   formComponentClass,
@@ -11,7 +11,7 @@ const FormComponent = ({
   const theme = useTheme();
   return (
     <FormComponentStyled className={`${formComponentClass}`}>
-      {theme.logo}
+      <div className="form-logo">{theme.logo}</div>
       <div className="form-head">
         <h1>
           {formHead} {ifsvg && theme.lock}
