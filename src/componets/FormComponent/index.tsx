@@ -1,13 +1,15 @@
 import { FormComponentStyled } from './style';
 import { useTheme } from 'styled-components';
 
-const FormComponent = ({
-  formComponentClass,
-  formHead,
-  formPara,
-  ifsvg,
-  children,
-}) => {
+interface Props {
+  formComponentClass: string;
+  formHead: string;
+  formPara: string;
+  ifsvg?: boolean;
+  children: any;
+}
+const FormComponent = (props: Props) => {
+  const { formComponentClass, formHead, formPara, ifsvg, children } = props;
   const theme = useTheme();
   return (
     <FormComponentStyled className={`${formComponentClass}`}>
