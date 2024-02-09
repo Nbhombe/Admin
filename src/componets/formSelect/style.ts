@@ -1,6 +1,6 @@
+import { FormSelectProps } from "react-bootstrap";
 import styled from "styled-components";
-
-export const FormSelectStyled = styled.div`
+export const FormSelectStyled = styled.div<FormSelectProps>`
   position: relative;
   label {
     margin-top: 25px;

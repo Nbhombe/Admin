@@ -1,7 +1,22 @@
-import Select from "react-select";
-import { FormSelectStyled } from "./style";
-import { Form } from "react-bootstrap";
-const FormSelect = ({ options, placeholder, label, disabled, menuIsOpen, formSelectClass }) => {
+import Select from 'react-select';
+import { FormSelectStyled } from './style';
+import { Form } from 'react-bootstrap';
+interface Props {
+  options: any[];
+  placeholder?: string;
+  label?: string;
+  disabled?: boolean;
+  menuIsOpen?: boolean;
+  formSelectClass?: string;
+}
+const FormSelect = ({
+  options,
+  placeholder,
+  label,
+  disabled,
+  menuIsOpen,
+  formSelectClass,
+}: Props) => {
   return (
     <FormSelectStyled disabled={disabled} className={formSelectClass}>
       {label && <Form.Label>{label}</Form.Label>}
