@@ -1,78 +1,82 @@
-import { NotificationListStyled } from "./style";
+import { NotificationListStyled } from './style';
 
 const NotificationListData = [
   {
-    image: "",
-    profileText: "SJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "Today",
+    image: '',
+    profileText: 'SJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: 'Today',
     unread: true,
   },
   {
-    image: "",
-    profileText: "VJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "Yesterday",
+    image: '',
+    profileText: 'VJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: 'Yesterday',
     unread: true,
   },
   {
-    image: "",
-    profileText: "VJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "11 Dec",
+    image: '',
+    profileText: 'VJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: '11 Dec',
     unread: false,
   },
   {
-    image: "",
-    profileText: "VJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "10 Dec",
+    image: '',
+    profileText: 'VJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: '10 Dec',
     unread: false,
   },
   {
-    image: "",
-    profileText: "VJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "10 Dec",
+    image: '',
+    profileText: 'VJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: '10 Dec',
     unread: false,
   },
   {
-    image: "",
-    profileText: "VJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "10 Dec",
+    image: '',
+    profileText: 'VJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: '10 Dec',
     unread: false,
   },
   {
-    image: "",
-    profileText: "VJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "10 Dec",
+    image: '',
+    profileText: 'VJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: '10 Dec',
     unread: false,
   },
   {
-    image: "",
-    profileText: "VJ",
-    notificationHead: "Congratulations Flora!",
-    notificationDesc: "Won the monthly best seller badge",
-    notificationDate: "10 Dec",
+    image: '',
+    profileText: 'VJ',
+    notificationHead: 'Congratulations Flora!',
+    notificationDesc: 'Won the monthly best seller badge',
+    notificationDate: '10 Dec',
     unread: false,
   },
 ];
 
-const NotificationList = ({ unread, notifyDropdown, notifyListClass }) => {
+const NotificationList = ({ unread, notifyDropdown, notifyListClass }: any) => {
   return (
-    <NotificationListStyled unread={unread} notifyDropdown={notifyDropdown} className={notifyListClass}>
+    <NotificationListStyled
+      unread={unread}
+      notifyDropdown={notifyDropdown}
+      className={notifyListClass}
+    >
       <ul>
         {NotificationListData.map((data, index) => (
-          <li key={index} className={data.unread ? "unread" : ""}>
+          <li key={index} className={data.unread ? 'unread' : ''}>
             <div className="notification-content">
               <div className="notification-content-image">
                 {data.unread && <div className="notification-dot"></div>}

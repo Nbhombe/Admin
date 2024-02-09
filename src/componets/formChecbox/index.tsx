@@ -2,7 +2,7 @@ import { Form } from 'react-bootstrap';
 import { FormChecboxStyled } from './style';
 import { FormCheckType } from 'react-bootstrap/esm/FormCheck';
 interface Props {
-  type: FormCheckType;
+  type?: FormCheckType;
   label?: string;
   disabled?: boolean;
 }

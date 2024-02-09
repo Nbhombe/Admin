@@ -2,7 +2,7 @@ import { InputGroup } from 'react-bootstrap';
 import { FormInputStyled } from './style';
 import Form from 'react-bootstrap/Form';
 interface Props {
-  label: string;
+  label?: string;
   type?: string;
   placeholder: string;
   id?: string;

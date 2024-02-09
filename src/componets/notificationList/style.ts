@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NotificationListStyled = styled.div`
+export const NotificationListStyled = styled.div<any>`
   position: relative;
   height: ${({ notifyDropdown }) => (notifyDropdown ? "252px" : "auto")};
   overflow: auto;
