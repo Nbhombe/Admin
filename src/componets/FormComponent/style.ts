@@ -4,20 +4,12 @@ import Check from "../../assets/icons/check.svg";
 export const FormComponentStyled = styled.div`
   position: relative;
   padding: 0 60px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  .form-logo{
-    text-align:center;
-    svg{
-      width: 100px;
-    }
-  }
   background-color: ${(props) => props.theme.customColor.primary};
   .form-head {
-    margin-top: 20px;
+    margin-top: 40px;
     h1 {
       color: ${(props) => props.theme.brandColor.primary};
       display: flex;
@@ -27,7 +19,7 @@ export const FormComponentStyled = styled.div`
       }
     }
     p {
-      margin-top: 10px;
+      margin-top: 25px;
       font-size: ${(props) => props.theme.fontSize.small};
       color: ${(props) => props.theme.darkColor.dark1};
     }
@@ -37,12 +29,6 @@ export const FormComponentStyled = styled.div`
     .form-btn {
       margin-top: 25px;
       width: 100%;
-    }
-    label{
-      margin-top:10px;
-    }
-    .form-check-label{
-      margin-top: 0;
     }
     .forget-pass {
       display: flex;

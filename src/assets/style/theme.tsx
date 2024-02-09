@@ -25,6 +25,7 @@ import {
   LightSearch,
   LightTeam,
   LightToggle,
+  LightLogo,
 } from '../icons/index';
 
 export const lightTheme = {
@@ -92,7 +93,7 @@ export const lightTheme = {
     font34: '34px',
   },
   toggle: <LightToggle />,
-  logo: <AdminLogo />,
+  logo: <LightLogo />,
   check: <LightCheck />,
   google: <LightGoogle />,
   facebook: <LightFacebook />,
