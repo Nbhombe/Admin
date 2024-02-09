@@ -1,9 +1,9 @@
 import { ButtonStyled } from './style';
 interface Props {
   btnText: string;
-  buttonClass: string;
+  buttonClass?: string;
   disabled?: boolean;
-  secondBtn?: any;
+  secondBtn?: boolean;
 }
 const Button = (props: Props) => {
   const { btnText, buttonClass, disabled, secondBtn } = props;

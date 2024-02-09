@@ -1,18 +1,21 @@
+import { ButtonProps } from "react-bootstrap";
 import styled from "styled-components";
-
-export const ButtonStyled = styled.button`
+interface ButtonBProps extends ButtonProps {
+  secondBtn: any;
+}
+export const ButtonStyled = styled.button<ButtonBProps>`
   position: relative;
   border: 1px solid
-    ${({ secondBtn, theme }) =>
-      secondBtn ? theme.brandColor.subtle : theme.brandColor.primary};
+    ${({ secondBtn, theme }: any) =>
+    secondBtn ? theme.brandColor.subtle : theme.brandColor.primary};
   outline: 0;
   box-shadow: 0 0 0 transparent;
   border-radius: 5px;
   padding: 14px;
   opacity: ${({ disabled }) => (disabled ? "0.5" : "1")};
-  background: ${({ secondBtn, theme }) =>
+  background: ${({ secondBtn, theme }: any) =>
     secondBtn ? theme.brandColor.subtle : theme.brandColor.primary};
-  color: ${({ secondBtn, theme }) =>
+  color: ${({ secondBtn, theme }: any) =>
     secondBtn ? theme.brandColor.primary : theme.customColor.primary};
   font-size: ${(props) => props.theme.fontSize.medium};
   font-weight: 700;
