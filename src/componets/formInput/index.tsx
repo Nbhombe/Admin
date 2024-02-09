@@ -1,7 +1,15 @@
 import { InputGroup } from 'react-bootstrap';
 import { FormInputStyled } from './style';
 import Form from 'react-bootstrap/Form';
-
+interface Props {
+  label: string;
+  type?: string;
+  placeholder: string;
+  id?: string;
+  icon?: any;
+  formInputClass?: string;
+  disabled?: boolean;
+}
 const FormInput = ({
   label,
   type,
@@ -10,7 +18,7 @@ const FormInput = ({
   icon,
   formInputClass,
   disabled,
-}) => {
+}: Props) => {
   return (
     <FormInputStyled
       className={formInputClass}
