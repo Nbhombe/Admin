@@ -1,6 +1,7 @@
+import { FormCheckInputProps } from "react-bootstrap/esm/FormCheckInput";
 import styled from "styled-components";
 
-export const FormChecboxStyled = styled.div`
+export const FormChecboxStyled = styled.div<FormCheckInputProps>`
   position: relative;
   margin-top: 25px;
   label {

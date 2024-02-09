@@ -1,7 +1,12 @@
-import { Form } from "react-bootstrap";
-import { FormChecboxStyled } from "./style";
-
-const FormChecbox = ({type, label, disabled}) => {
+import { Form } from 'react-bootstrap';
+import { FormChecboxStyled } from './style';
+import { FormCheckType } from 'react-bootstrap/esm/FormCheck';
+interface Props {
+  type: FormCheckType;
+  label?: string;
+  disabled?: boolean;
+}
+const FormChecbox = ({ type, label, disabled }: Props) => {
   return (
     <FormChecboxStyled disabled={disabled}>
       <Form.Check
