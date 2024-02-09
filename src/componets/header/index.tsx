@@ -1,9 +1,10 @@
-import { Dropdown, Form } from "react-bootstrap";
-import { HeaderStyled } from "./style";
-import { useTheme } from "styled-components";
-import Profile from "../../assets/images/profile.png";
-import FormInput from "../formInput";
-import NotificationList from "../notificationList";
+import { Dropdown, Form } from 'react-bootstrap';
+import { HeaderStyled } from './style';
+import { useTheme } from 'styled-components';
+import Profile from '../../assets/images/profile.png';
+import FormInput from '../formInput';
+import NotificationList from '../notificationList';
+import { Link } from 'react-router-dom';
 const Header = () => {
   const theme = useTheme();
   return (
@@ -22,7 +23,7 @@ const Header = () => {
         </div>
         <div className="header-right">
           <div className="info">
-            <a href="#">{theme.info}</a>
+            <Link to="#">{theme.info}</Link>
           </div>
           <div className="notification">
             <div className="notify"></div>
@@ -33,14 +34,14 @@ const Header = () => {
               <Dropdown.Menu>
                 <div className="notification-section-head">
                   <h6>Notification</h6>
-                  <a href="#">Mark All As Read</a>
+                  <Link to="#">Mark All As Read</Link>
                 </div>
                 <NotificationList
                   notifyDropdown={true}
                   notifyListClass="notification-list"
                 />
                 <div className="notification-section-bottom">
-                  <a href="#">View All Notification</a>
+                  <Link to="#">View All Notification</Link>
                 </div>
               </Dropdown.Menu>
             </Dropdown>

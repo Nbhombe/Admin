@@ -2,9 +2,10 @@ import { useTheme } from 'styled-components';
 import { SidebarStyled } from './style';
 import { useState } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const links = [
-  { themeLabel: 'dashboard', href: 'admin', text: 'Dashboard' },
+  { themeLabel: 'dashboard', href: '/admin', text: 'Dashboard' },
   { themeLabel: 'product', href: '/product', text: 'Product' },
   { themeLabel: 'insight', href: '/insight', text: 'Insight' },
   { themeLabel: 'team', href: '/people', text: 'People & Teams' },
@@ -31,9 +32,9 @@ const Sidebar = () => {
         <ul>
           {links.map((item, index) => (
             <li key={index}>
-              <a href={item.href}>
+              <Link to={item.href}>
                 {theme[item.themeLabel]} <p>{item.text}</p>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,7 +1,8 @@
-import Form from "react-bootstrap/Form";
-import Button from "../../../button";
-import FormInput from "../../../formInput";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import Form from 'react-bootstrap/Form';
+import Button from '../../../button';
+import FormInput from '../../../formInput';
+import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 const ForgetPasswordForm = () => {
   return (
@@ -9,7 +10,11 @@ const ForgetPasswordForm = () => {
       <FormInput label="Email" type="email" placeholder="Email Address" />
       <Button btnText="Send Reset Link" buttonClass="form-btn" />
       <div className="login-link">
-        <p><a href="/"><MdOutlineKeyboardArrowLeft />  Back to login</a></p>
+        <p>
+          <Link to="/">
+            <MdOutlineKeyboardArrowLeft /> Back to login
+          </Link>
+        </p>
       </div>
     </Form>
   );

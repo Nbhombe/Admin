@@ -1,38 +1,39 @@
-import { Col, Row } from "react-bootstrap";
-import EarningCard from "../../componets/earningCard";
-import Header from "../../componets/header";
-import { DashboardStyled } from "./style";
-import Customer from "../../componets/customers";
-import RecentOrders from "../../componets/recentOrders";
-import BarGraph from "../../componets/barGraph";
-import PieChart from "../../componets/pieChart";
+import { Col, Row } from 'react-bootstrap';
+import EarningCard from '../../componets/earningCard';
+import Header from '../../componets/header';
+import { DashboardStyled } from './style';
+import Customer from '../../componets/customers';
+import RecentOrders from '../../componets/recentOrders';
+import BarGraph from '../../componets/barGraph';
+import PieChart from '../../componets/pieChart';
+import { Link } from 'react-router-dom';
 
 const EarningCardData = [
   {
-    earningHead: "Total Earnings",
-    earningData: "$92,000",
-    profit: "16.4",
+    earningHead: 'Total Earnings',
+    earningData: '$92,000',
+    profit: '16.4',
     isProfit: true,
     isNuetral: false,
   },
   {
-    earningHead: "Total Purchase",
-    earningData: "$46,700",
-    profit: "16.4",
+    earningHead: 'Total Purchase',
+    earningData: '$46,700',
+    profit: '16.4',
     isProfit: false,
     isNuetral: false,
   },
   {
-    earningHead: "Total Sales",
-    earningData: "$96,000",
-    profit: "16.4",
+    earningHead: 'Total Sales',
+    earningData: '$96,000',
+    profit: '16.4',
     isProfit: true,
     isNuetral: false,
   },
   {
-    earningHead: "Total Orders",
-    earningData: "10,000",
-    profit: "00.0",
+    earningHead: 'Total Orders',
+    earningData: '10,000',
+    profit: '00.0',
     isProfit: true,
     isNuetral: true,
   },
@@ -70,16 +71,16 @@ const Dashboard = () => {
                 <div className="bar-graph-month">
                   <ul>
                     <li>
-                      <a href="#">1M</a>
+                      <Link to="#">1M</Link>
                     </li>
                     <li className="active">
-                      <a href="#">3M</a>
+                      <Link to="#">3M</Link>
                     </li>
                     <li>
-                      <a href="#">6M</a>
+                      <Link to="#">6M</Link>
                     </li>
                     <li>
-                      <a href="#">12M</a>
+                      <Link to="#">12M</Link>
                     </li>
                   </ul>
                 </div>
@@ -107,8 +108,8 @@ const Dashboard = () => {
           </Col>
           <Col lg={4} className="d-flex">
             <div className="pie-chart flex-fill">
-            <div className="pie-graph-head">
-                <h6>Store Visits by Source</h6>                
+              <div className="pie-graph-head">
+                <h6>Store Visits by Source</h6>
               </div>
               <PieChart />
             </div>

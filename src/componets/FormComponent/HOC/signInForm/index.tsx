@@ -1,7 +1,8 @@
-import Form from "react-bootstrap/Form";
-import Button from "../../../button";
-import FormInput from "../../../formInput";
-import { useTheme } from "styled-components";
+import Form from 'react-bootstrap/Form';
+import Button from '../../../button';
+import FormInput from '../../../formInput';
+import { useTheme } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const SignInForm = () => {
   const theme = useTheme();
@@ -12,14 +13,14 @@ const SignInForm = () => {
       <Button btnText="Sign In" buttonClass="form-btn" />
       <div className="forget-pass">
         <Form.Check type="checkbox" id="default-checkbox" label="Remember me" />
-        <a href="/forget_password" className="forget-link">
+        <Link to="/forget_password" className="forget-link">
           Forgot Password?
-        </a>
+        </Link>
       </div>
       <div className="signin-option">
-        <a href="/signup" className="sign-link">
+        <Link to="/signup" className="sign-link">
           Or Sign In with
-        </a>
+        </Link>
         <div className="signin-social">
           {theme.google}
           {theme.facebook}

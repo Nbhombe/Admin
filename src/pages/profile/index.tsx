@@ -1,12 +1,13 @@
-import Header from "../../componets/header";
-import PageHead from "../../componets/pageHead";
-import { ProfileStyled } from "./style";
-import ProfileImage from "../../assets/images/profile.png";
-import { PiSuitcaseBold } from "react-icons/pi";
-import { FaRegMap } from "react-icons/fa6";
-import { LuCalendar } from "react-icons/lu";
-import { Col, Row } from "react-bootstrap";
-import ClientImage from "../../assets/images/client-image.png"
+import Header from '../../componets/header';
+import PageHead from '../../componets/pageHead';
+import { ProfileStyled } from './style';
+import ProfileImage from '../../assets/images/profile.png';
+import { PiSuitcaseBold } from 'react-icons/pi';
+import { FaRegMap } from 'react-icons/fa6';
+import { LuCalendar } from 'react-icons/lu';
+import { Col, Row } from 'react-bootstrap';
+import ClientImage from '../../assets/images/client-image.png';
+import { Link } from 'react-router-dom';
 const Profile = () => {
   return (
     <ProfileStyled>
@@ -88,7 +89,9 @@ const Profile = () => {
                 <li>
                   <div className="timeline-step">
                     <h5>Create a new project for client</h5>
-                    <p><a href="#">Add files to new design folder</a></p>
+                    <p>
+                      <Link to="#">Add files to new design folder</Link>
+                    </p>
                   </div>
                 </li>
                 <li>

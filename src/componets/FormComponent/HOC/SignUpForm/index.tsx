@@ -1,7 +1,8 @@
-import Form from "react-bootstrap/Form";
-import Button from "../../../button";
-import FormInput from "../../../formInput";
-import { useTheme } from "styled-components";
+import Form from 'react-bootstrap/Form';
+import Button from '../../../button';
+import FormInput from '../../../formInput';
+import { useTheme } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const SignUpForm = () => {
   const theme = useTheme();
@@ -18,11 +19,11 @@ const SignUpForm = () => {
         </a>
       </div> */}
       <div className="signin-option">
-        <a href="/" className="sign-link">
+        <Link to="/" className="sign-link">
           Or Sign In with
-        </a>
+        </Link>
         <div className="signin-social">
-        {theme.google}
+          {theme.google}
           {theme.facebook}
           {theme.ios}
         </div>
