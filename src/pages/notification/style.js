@@ -12,6 +12,8 @@ export const NotificationStyled = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
       padding: 17px 25px;
       h6 {
         color: ${(props) => props.theme.darkColor.dark1};

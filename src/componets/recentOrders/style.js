@@ -46,7 +46,7 @@ export const RecentOrdersStyled = styled.div`
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
-              width: 70px;
+              max-width: 70px;
               display: inline-block;
             }
             img {

@@ -34,7 +34,7 @@ const AdminRoutes = [
     name: "Profile",
     element: <Profile />,
     path: "profile",    
-    navigation: true,
+    navigation: false,
   },
   {
     path: "*",

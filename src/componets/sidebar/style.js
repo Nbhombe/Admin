@@ -7,7 +7,7 @@ export const SidebarStyled = styled.div`
   height: 100%;
   padding: 26px 23px;
   transition: 0.5s all;
-  &.active {
+  &.sidebarOpen {
     width: 80px;
     transition: 0.5s all;
     .logo {
@@ -76,6 +76,16 @@ export const SidebarStyled = styled.div`
             transition: 1s all;
             width: 100%;
           }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: ${(props) => props.theme.breakPoints.md}) {
+    width: 100%;
+    &:not(.sidebarOpen) {
+      .logo {
+        .toggle-button {
+          right: 0;
         }
       }
     }
