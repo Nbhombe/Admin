@@ -6,7 +6,7 @@ import SignUp from "../../pages/signUp";
 
 const WebRoutes = [
   {
-    name: "Login",
+    name: "login",
     element: <SignIn />,
     path: "",
     navigation: true,

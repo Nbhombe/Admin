@@ -11,7 +11,7 @@ const SignUpForm = () => {
     <Form>
       <FormInput label="Email" type="email" placeholder="Email Address" />
       <FormInput label="Password" type="password" placeholder="Password" />
-      <Button btnText="Sign In" buttonClass="form-btn" />
+      <Button btnText="Sign Up" buttonClass="form-btn" />
       {/* <div className="forget-pass">
         <Form.Check type="checkbox" id="default-checkbox" label="Remember me" />
         <a href="#" className="forget-link">

@@ -14,7 +14,7 @@ const SignUp = () => {
             <FormComponent
               formComponentClass="form-wrap"
               formHead="Sign Up"
-              formPara="Enter the below information to sign up"
+              formPara="Enter the below information to sign in"
             >
               <SignUpForm />
             </FormComponent>
