@@ -1,5 +1,4 @@
 import {
-  AdminLogo,
   DarKLogoBlack,
   DarkCheck,
   DarkDashboard,
@@ -19,14 +18,14 @@ import {
   LightInsight,
   LightIos,
   LightLock,
+  LightLogo,
   LightLogoWhite,
   LightMiniLogo,
   LightProduct,
   LightSearch,
   LightTeam,
   LightToggle,
-  LightLogo,
-} from '../icons/index';
+} from '../icons';
 
 export const lightTheme = {
   brandColor: {
@@ -91,6 +90,14 @@ export const lightTheme = {
     font24: '24px',
     font30: '30px',
     font34: '34px',
+  },
+  breakPoints: {
+    xs: '0',
+    sm: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
+    xxl: '1440px',
   },
   toggle: <LightToggle />,
   logo: <LightLogo />,
@@ -173,6 +180,14 @@ export const darkTheme = {
     font24: '24px',
     font30: '30px',
     font34: '34px',
+  },
+  breakPoints: {
+    xs: '0',
+    sm: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
+    xxl: '1440px',
   },
   toggle: <LightToggle />,
   logo: <DarkLogo />,

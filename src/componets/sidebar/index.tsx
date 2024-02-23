@@ -1,26 +1,30 @@
 import { useTheme } from 'styled-components';
 import { SidebarStyled } from './style';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 const links = [
   { themeLabel: 'dashboard', href: '/admin', text: 'Dashboard' },
-  { themeLabel: 'product', href: '/product', text: 'Product' },
-  { themeLabel: 'insight', href: '/insight', text: 'Insight' },
-  { themeLabel: 'team', href: '/people', text: 'People & Teams' },
-  { themeLabel: 'inbox', href: '', text: 'Inbox' },
+  { themeLabel: 'product', href: '/admin/products', text: 'Product' },
+  { themeLabel: 'insight', href: '/admin/add_product', text: 'Insight' },
+  { themeLabel: 'team', href: '/admin/profile', text: 'People & Teams' },
+  { themeLabel: 'inbox', href: '/admin/notification', text: 'Inbox' },
 ];
 
 const Sidebar = () => {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setIsOpen(true);
+    }
+  }, []);
   const ToggleSidebar = () => {
     setIsOpen(prevOpen => !prevOpen);
   };
   return (
-    <SidebarStyled className={`sidebar ${isOpen ? 'active' : ''}`}>
+    <SidebarStyled className={`sidebar ${isOpen ? 'sidebarOpen' : ''}`}>
       <div className="logo">
         <div className="mainlogo">{theme.logoWhite}</div>{' '}
         <div className="minilogo">{theme.miniLogo}</div>{' '}
