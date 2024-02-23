@@ -1,6 +1,7 @@
 import { Table } from "react-bootstrap";
 import { RecentOrdersStyled } from "./style";
 import Product_1 from "../../assets/images/product_1.png";
+import Skeleton from "react-loading-skeleton";
 const RecentOrdersData = [
     {
         products_no: "#FZ001",
@@ -94,7 +95,7 @@ const RecentOrdersData = [
     },
 ]
 
-const RecentOrders = ({ordersWrapper}) => {
+const RecentOrders = ({ordersWrapper, loading}) => {
   return (
     <RecentOrdersStyled className={ordersWrapper}>
       <div className="sub-head">
@@ -113,6 +114,10 @@ const RecentOrders = ({ordersWrapper}) => {
             </thead>
             <tbody>
                 {RecentOrdersData.map((data,index) => (
+                    loading ? (
+                        <Skeleton />
+                      ) : (
+                        <>
                     <tr>
                         <td><p>{data.products_no}</p></td>
                         <td><img src={data.products_image} alt="product image" /><span>{data.products_name}</span></td>
@@ -122,6 +127,7 @@ const RecentOrders = ({ordersWrapper}) => {
                         <td><p>{data.products_price}</p></td>
                         <td><p>{data.products_vendor}</p></td>
                     </tr>
+                    </>)
                 ))}
             </tbody>
         </Table>

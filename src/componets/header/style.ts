@@ -11,6 +11,7 @@ export const HeaderStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
     .header-right {
       display: flex;
       align-items: center;
@@ -64,6 +65,8 @@ export const HeaderStyled = styled.div`
               align-items: center;
               justify-content: space-between;
               padding: 15px;
+              flex-wrap: wrap;
+              gap: 10px;
               h6 {
                 color: ${(props) => props.theme.darkColor.dark1};
               }
@@ -81,6 +84,7 @@ export const HeaderStyled = styled.div`
               a {
                 font-size: ${(props) => props.theme.fontSize.small};
                 color: ${(props) => props.theme.darkColor.dark3};
+                text-align: center;
               }
             }
           }

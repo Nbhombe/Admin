@@ -1,12 +1,13 @@
 import { Col, Row } from 'react-bootstrap';
+import Skeleton from 'react-loading-skeleton';
+import { Link } from 'react-router-dom';
+import BarGraph from '../../componets/barGraph';
+import Customer from '../../componets/customers';
 import EarningCard from '../../componets/earningCard';
 import Header from '../../componets/header';
-import { DashboardStyled } from './style';
-import Customer from '../../componets/customers';
-import RecentOrders from '../../componets/recentOrders';
-import BarGraph from '../../componets/barGraph';
 import PieChart from '../../componets/pieChart';
-import { Link } from 'react-router-dom';
+import RecentOrders from '../../componets/recentOrders';
+import { DashboardStyled } from './style';
 
 const EarningCardData = [
   {
@@ -39,7 +40,7 @@ const EarningCardData = [
   },
 ];
 
-const Dashboard = () => {
+const Dashboard = ({ loading }) => {
   return (
     <DashboardStyled>
       <Header />
@@ -87,20 +88,44 @@ const Dashboard = () => {
               </div>
               <div className="bar-graph-stats">
                 <div className="bar-graph-stats-inner">
-                  <h4>7,585</h4>
-                  <p>Orders</p>
+                  {loading ? (
+                    <Skeleton />
+                  ) : (
+                    <>
+                      <h4>7,585</h4>
+                      <p>Orders</p>
+                    </>
+                  )}
                 </div>
                 <div className="bar-graph-stats-inner">
-                  <h4>$22.89k</h4>
-                  <p>Earnings</p>
+                  {loading ? (
+                    <Skeleton />
+                  ) : (
+                    <>
+                      <h4>$22.89k</h4>
+                      <p>Earnings</p>
+                    </>
+                  )}
                 </div>
                 <div className="bar-graph-stats-inner">
-                  <h4>367</h4>
-                  <p>Refund</p>
+                  {loading ? (
+                    <Skeleton />
+                  ) : (
+                    <>
+                      <h4>367</h4>
+                      <p>Refund</p>
+                    </>
+                  )}
                 </div>
                 <div className="bar-graph-stats-inner">
-                  <h4>18.92%</h4>
-                  <p>Conversation Ratio</p>
+                  {loading ? (
+                    <Skeleton />
+                  ) : (
+                    <>
+                      <h4>18.92%</h4>
+                      <p>Conversation Ratio</p>
+                    </>
+                  )}
                 </div>
               </div>
               <BarGraph />
@@ -118,12 +143,12 @@ const Dashboard = () => {
       </div>
       <div className="bottom-part">
         <Row>
-          <Col lg={4} className="d-flex">
+          <Col lg={4}>
             <div className="top-customer-sec flex-fill">
               <Customer customerWrapper="top-customer-sec-inner" />
             </div>
           </Col>
-          <Col lg={8} className="d-flex">
+          <Col lg={8}>
             <div className="recent-order-sec flex-fill">
               <RecentOrders ordersWrapper="recent-order-sec-inner" />
             </div>

@@ -1,9 +1,10 @@
-import { CustomerStyled } from './style';
+import Skeleton from 'react-loading-skeleton';
 import Customer_1 from '../../assets/images/customer_1.png';
 import Customer_2 from '../../assets/images/customer_2.png';
 import Customer_3 from '../../assets/images/customer_3.png';
 import Customer_4 from '../../assets/images/customer_4.png';
 import Customer_5 from '../../assets/images/customer_5.png';
+import { CustomerStyled } from './style';
 
 const CustomerData = [
   {
@@ -40,7 +41,7 @@ const CustomerData = [
 interface Props {
   customerWrapper: any;
 }
-const Customer = ({ customerWrapper }: Props) => {
+const Customer = ({ customerWrapper, loading }: Props) => {
   return (
     <CustomerStyled className={customerWrapper}>
       <div className="sub-head">
@@ -50,22 +51,28 @@ const Customer = ({ customerWrapper }: Props) => {
         <ul>
           {CustomerData.map((data, index) => (
             <li key={index}>
-              <div className="customer-list-inner">
-                <div className="customer-list-inner-left">
-                  <div className="customer-list-inner-image">
-                    <img src={data.customer_image} alt="customer-image" />
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <>
+                  <div className="customer-list-inner">
+                    <div className="customer-list-inner-left">
+                      <div className="customer-list-inner-image">
+                        <img src={data.customer_image} alt="customer-image" />
+                      </div>
+                      <div className="customer-list-inner-content">
+                        <h6>{data.customer_name}</h6>
+                        <p>{data.customer_purchase} Purchase</p>
+                      </div>
+                    </div>
+                    <div className="customer-list-inner-right">
+                      <div className="customer-list-inner-price">
+                        <p>${data.customer_price}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="customer-list-inner-content">
-                    <h6>{data.customer_name}</h6>
-                    <p>{data.customer_purchase} Purchase</p>
-                  </div>
-                </div>
-                <div className="customer-list-inner-right">
-                  <div className="customer-list-inner-price">
-                    <p>${data.customer_price}</p>
-                  </div>
-                </div>
-              </div>
+                </>
+              )}
             </li>
           ))}
         </ul>
