@@ -6,6 +6,7 @@ interface Props {
   secondBtn?: boolean;
   onClick?: () => void;
 }
+
 const Button = (props: Props) => {
   const { btnText, buttonClass, disabled, secondBtn, onClick } = props;
   return (

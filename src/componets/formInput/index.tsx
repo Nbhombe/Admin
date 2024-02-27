@@ -9,6 +9,7 @@ interface Props {
   icon?: any;
   formInputClass?: string;
   disabled?: boolean;
+  onChange?: () => void;
 }
 const FormInput = ({
   label,
@@ -18,6 +19,7 @@ const FormInput = ({
   icon,
   formInputClass,
   disabled,
+  onChange
 }: Props) => {
   return (
     <FormInputStyled
@@ -25,6 +27,7 @@ const FormInput = ({
       controlId=""
       icon={icon}
       disabled={disabled}
+      onChange={onChange}
     >
       {icon && <InputGroup.Text id={id}>{icon}</InputGroup.Text>}
       {label && <Form.Label>{label}</Form.Label>}

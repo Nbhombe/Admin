@@ -4,7 +4,9 @@ import Row from 'react-bootstrap/Row';
 import FormComponent from '../../componets/FormComponent';
 import ForgetPasswordForm from '../../componets/FormComponent/HOC/forgetPasswordForm';
 import { SignInStyled } from '../signIn/style';
+
 const ForgetPassword = () => {
+
   return (
     <SignInStyled>
       <Container>
